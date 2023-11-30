@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_components_paragraphs",
+  "info": {
+    "displayName": "Paragraph",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.multi-paragraph"
+    }
+  }
+}

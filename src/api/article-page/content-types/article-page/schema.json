@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "article_pages",
+  "info": {
+    "singularName": "article-page",
+    "pluralName": "article-pages",
+    "displayName": "ArticlePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "mainScreen": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.main-screen"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}
