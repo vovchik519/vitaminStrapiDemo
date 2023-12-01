@@ -1090,7 +1090,7 @@ export interface ApiHeaderHeader extends Schema.SingleType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: false;
+          localized: true;
         };
       }>;
     menu: Attribute.Relation<
