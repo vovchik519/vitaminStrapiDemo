@@ -702,24 +702,28 @@ export interface ApiAboutAbout extends Schema.SingleType {
         };
       }>;
     poem: Attribute.Component<'components.multi-paragraph', true> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     giclee: Attribute.Component<'sections.blox-image-one'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     family: Attribute.Component<'sections.block-text-and-link'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     info: Attribute.Component<'sections.block-text-and-link'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
