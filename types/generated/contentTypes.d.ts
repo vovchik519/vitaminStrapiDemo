@@ -702,7 +702,6 @@ export interface ApiAboutAbout extends Schema.SingleType {
         };
       }>;
     poem: Attribute.Component<'components.multi-paragraph', true> &
-      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -816,6 +815,7 @@ export interface ApiArticlePageArticlePage extends Schema.SingleType {
   };
   attributes: {
     mainScreen: Attribute.Component<'sections.main-screen'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -945,6 +945,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
       'api::social.social'
     >;
     logo: Attribute.Component<'components.logo-with-name'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1038,6 +1039,7 @@ export interface ApiGalleryPageGalleryPage extends Schema.SingleType {
   };
   attributes: {
     mainScreen: Attribute.Component<'sections.main-screen'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1150,18 +1152,21 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
         };
       }>;
     intro: Attribute.Component<'sections.block-text-one'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     about: Attribute.Component<'sections.block-text-two'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     forKids: Attribute.Component<'sections.block-text'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1175,6 +1180,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
         };
       }>;
     gallery: Attribute.Component<'sections.gallery'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1274,6 +1280,7 @@ export interface ApiPantryPantry extends Schema.SingleType {
         };
       }>;
     gallery: Attribute.Component<'sections.gallery-block', true> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1365,6 +1372,7 @@ export interface ApiPoemPagePoemPage extends Schema.SingleType {
   };
   attributes: {
     poemsList: Attribute.Component<'sections.poems-list'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

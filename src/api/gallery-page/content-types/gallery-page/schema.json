@@ -24,7 +24,8 @@
           "localized": true
         }
       },
-      "component": "sections.main-screen"
+      "component": "sections.main-screen",
+      "required": true
     },
     "gallery": {
       "displayName": "GalleryBlock",

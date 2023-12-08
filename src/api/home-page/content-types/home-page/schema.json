@@ -38,7 +38,7 @@
         }
       },
       "component": "sections.block-text-one",
-      "required": false
+      "required": true
     },
     "about": {
       "type": "component",
@@ -49,7 +49,7 @@
         }
       },
       "component": "sections.block-text-two",
-      "required": false
+      "required": true
     },
     "forKids": {
       "displayName": "BlockText",
@@ -60,7 +60,8 @@
           "localized": true
         }
       },
-      "component": "sections.block-text"
+      "component": "sections.block-text",
+      "required": true
     },
     "feedback": {
       "displayName": "Feedback",
@@ -82,7 +83,8 @@
           "localized": true
         }
       },
-      "component": "sections.gallery"
+      "component": "sections.gallery",
+      "required": true
     },
     "storeroom": {
       "type": "component",

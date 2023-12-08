@@ -36,7 +36,7 @@
         }
       },
       "component": "components.multi-paragraph",
-      "required": true
+      "required": false
     },
     "giclee": {
       "type": "component",

@@ -316,10 +316,11 @@ export interface SectionsPoemsList extends Schema.Component {
   collectionName: 'components_sections_poems_lists';
   info: {
     displayName: 'PoemsList';
+    description: '';
   };
   attributes: {
     supText: Attribute.Component<'components.multi-paragraph', true>;
-    title: Attribute.String & Attribute.Required;
+    title: Attribute.String;
     subText: Attribute.Component<'components.multi-paragraph', true>;
     poems: Attribute.Relation<
       'sections.poems-list',

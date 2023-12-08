@@ -34,7 +34,8 @@
           "localized": true
         }
       },
-      "component": "components.logo-with-name"
+      "component": "components.logo-with-name",
+      "required": true
     }
   }
 }

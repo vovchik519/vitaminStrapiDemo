@@ -35,7 +35,8 @@
           "localized": true
         }
       },
-      "component": "sections.gallery-block"
+      "component": "sections.gallery-block",
+      "required": true
     },
     "poemsList": {
       "displayName": "PoemsList",

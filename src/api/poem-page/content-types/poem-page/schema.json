@@ -24,7 +24,8 @@
           "localized": true
         }
       },
-      "component": "sections.poems-list"
+      "component": "sections.poems-list",
+      "required": true
     }
   }
 }
