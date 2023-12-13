@@ -849,6 +849,53 @@ export interface ApiArticlePageArticlePage extends Schema.SingleType {
   };
 }
 
+export interface ApiCatalogCatalog extends Schema.CollectionType {
+  collectionName: 'catalogs';
+  info: {
+    singularName: 'catalog';
+    pluralName: 'catalogs';
+    displayName: 'Catalog';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    product: Attribute.Component<'components.product', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::catalog.catalog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::catalog.catalog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::catalog.catalog',
+      'oneToMany',
+      'api::catalog.catalog'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiFirstPageFirstPage extends Schema.SingleType {
   collectionName: 'first_pages';
   info: {
@@ -1193,6 +1240,11 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
           localized: true;
         };
       }>;
+    catalog: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'api::catalog.catalog'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1287,6 +1339,19 @@ export interface ApiPantryPantry extends Schema.SingleType {
         };
       }>;
     poemsList: Attribute.Component<'sections.poems-list'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    poem: Attribute.Component<'sections.poem-extended'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    PoemBlock: Attribute.Component<'sections.poem-block'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1466,6 +1531,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::article-page.article-page': ApiArticlePageArticlePage;
+      'api::catalog.catalog': ApiCatalogCatalog;
       'api::first-page.first-page': ApiFirstPageFirstPage;
       'api::footer.footer': ApiFooterFooter;
       'api::gallery.gallery': ApiGalleryGallery;

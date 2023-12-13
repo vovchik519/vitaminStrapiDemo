@@ -49,6 +49,29 @@
       },
       "component": "sections.poems-list",
       "required": true
+    },
+    "poem": {
+      "displayName": "PoemExtended",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.poem-extended"
+    },
+    "PoemBlock": {
+      "displayName": "PoemBlock",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.poem-block",
+      "required": true
     }
   }
 }

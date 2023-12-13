@@ -13,6 +13,10 @@
       "type": "component",
       "repeatable": true,
       "component": "components.multi-paragraph"
+    },
+    "storiesStyle": {
+      "type": "boolean",
+      "required": false
     }
   }
 }

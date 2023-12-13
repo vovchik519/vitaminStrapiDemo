@@ -96,6 +96,11 @@
       },
       "component": "sections.block-text",
       "required": true
+    },
+    "catalog": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::catalog.catalog"
     }
   }
 }

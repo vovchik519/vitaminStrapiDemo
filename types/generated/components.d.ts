@@ -126,6 +126,35 @@ export interface ComponentsParagraph extends Schema.Component {
   attributes: {
     title: Attribute.String;
     paragraph: Attribute.Component<'components.multi-paragraph', true>;
+    storiesStyle: Attribute.Boolean;
+  };
+}
+
+export interface ComponentsProductDescription extends Schema.Component {
+  collectionName: 'components_components_product_descriptions';
+  info: {
+    displayName: 'productDescription';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    value: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface ComponentsProduct extends Schema.Component {
+  collectionName: 'components_components_products';
+  info: {
+    displayName: 'Product';
+  };
+  attributes: {
+    image: Attribute.Media & Attribute.Required;
+    name: Attribute.String & Attribute.Required;
+    price: Attribute.BigInteger & Attribute.Required;
+    city: Attribute.String & Attribute.Required;
+    purpose: Attribute.Text & Attribute.Required;
+    size: Attribute.String & Attribute.Required;
+    frame: Attribute.String & Attribute.Required;
+    year: Attribute.String & Attribute.Required;
   };
 }
 
@@ -312,6 +341,33 @@ export interface SectionsMainScreen extends Schema.Component {
   };
 }
 
+export interface SectionsPoemBlock extends Schema.Component {
+  collectionName: 'components_sections_poem_blocks';
+  info: {
+    displayName: 'PoemBlock';
+  };
+  attributes: {
+    image: Attribute.Media & Attribute.Required;
+    poemLine: Attribute.Component<'components.multi-paragraph', true> &
+      Attribute.Required;
+    button: Attribute.Component<'components.button'> & Attribute.Required;
+  };
+}
+
+export interface SectionsPoemExtended extends Schema.Component {
+  collectionName: 'components_sections_poem_extendeds';
+  info: {
+    displayName: 'PoemExtended';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+    titleTwo: Attribute.String;
+    poemItem: Attribute.Component<'components.multi-paragraph', true> &
+      Attribute.Required;
+  };
+}
+
 export interface SectionsPoemsList extends Schema.Component {
   collectionName: 'components_sections_poems_lists';
   info: {
@@ -343,6 +399,8 @@ declare module '@strapi/types' {
       'components.multi-paragraph': ComponentsMultiParagraph;
       'components.multi-title': ComponentsMultiTitle;
       'components.paragraph': ComponentsParagraph;
+      'components.product-description': ComponentsProductDescription;
+      'components.product': ComponentsProduct;
       'components.title-colorful': ComponentsTitleColorful;
       'sections.article-block': SectionsArticleBlock;
       'sections.block-text-and-link': SectionsBlockTextAndLink;
@@ -355,6 +413,8 @@ declare module '@strapi/types' {
       'sections.gallery-block': SectionsGalleryBlock;
       'sections.gallery': SectionsGallery;
       'sections.main-screen': SectionsMainScreen;
+      'sections.poem-block': SectionsPoemBlock;
+      'sections.poem-extended': SectionsPoemExtended;
       'sections.poems-list': SectionsPoemsList;
     }
   }
